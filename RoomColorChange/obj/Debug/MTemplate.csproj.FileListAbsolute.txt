@@ -1,0 +1,2 @@
+C:\Users\VecSzn\Desktop\PluginTemplateNW - Copy\MTemplate\obj\Debug\MTemplate.csproj.AssemblyReference.cache
+C:\Users\VecSzn\Desktop\PluginTemplateNW - Copy\MTemplate\obj\Debug\MTemplate.csproj.CoreCompileInputs.cache

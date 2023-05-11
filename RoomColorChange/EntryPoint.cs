@@ -24,7 +24,6 @@ using PluginAPI.Core.Items;
 using PluginAPI.Enums;
 using PluginAPI.Events;
 using UnityEngine;
-using static Org.BouncyCastle.Math.EC.ECCurve;
 
 namespace RoomLightChange
 {
@@ -63,7 +62,7 @@ namespace RoomLightChange
 
             colorhanle = Timing.RunCoroutine(RandomEvent());
         }
-        public  IEnumerator<float> RandomEvent()
+        public IEnumerator<float> RandomEvent()
         {
             while (Round.IsRoundStarted)
             {
