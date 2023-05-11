@@ -5,12 +5,14 @@
 
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Drawing;
 using System.IO;
 using System.Linq;
 using CommandSystem;
 using CustomPlayerEffects;
 using HarmonyLib;
+using Interactables;
 using Interactables.Interobjects.DoorUtils;
 using InventorySystem;
 using MapGeneration;
@@ -62,6 +64,37 @@ namespace RoomLightChange
 
             colorhanle = Timing.RunCoroutine(RandomEvent());
         }
+        public Dictionary<string,Color> Colors { get; set; } = new Dictionary<string, Color>
+        {
+            {
+                "red",
+                Color.red
+            },
+            {
+                "yellow",
+                Color.yellow
+            },
+            {
+                "green",
+                Color.green
+            },
+            {
+                "blue",
+                Color.blue
+            },
+            {
+                "cyan",
+                Color.cyan
+            },
+            {
+                "white",
+                Color.white
+            },
+            {
+                "magenta",
+                Color.magenta
+            },
+        };
         public IEnumerator<float> RandomEvent()
         {
             while (Round.IsRoundStarted)
@@ -70,9 +103,9 @@ namespace RoomLightChange
                 FlickerableLightController[] array2 = UnityEngine.Object.FindObjectsOfType<FlickerableLightController>();
                 foreach (FlickerableLightController flc in array2)
                 {
-                    if (Config.Rooms.Contains(flc.Room.Name))
+                    if (Config.Rooms.Contains(flc.Room.Name.ToString()))
                     {
-                        flc.WarheadLightColor = Config.Colors[new System.Random(Environment.TickCount).Next(0, 14)];
+                        flc.WarheadLightColor = Colors[Config.Colors[new System.Random(Environment.TickCount).Next(0, 14)]];
                     };
                 }
             }

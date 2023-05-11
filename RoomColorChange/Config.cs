@@ -22,21 +22,22 @@ namespace RoomLightChange
 
 
         [Description("可变色房间")]
-        public List<RoomName> Rooms { get; set; } = new List<RoomName>
+        public List<string> Rooms { get; set; } = new List<string>
         {
-            RoomName.Lcz914,
+            "Lcz914",
         };
 
+    
         [Description("可变换颜色")]
-        public List<Color> Colors { get; set; } = new List<Color>
+        public List<string> Colors { get; set; } = new List<string>
         {
-            Color.red,
-            Color.yellow,
-            Color.green,
-            Color.blue,
-            Color.cyan,
-            Color.white,
-            Color.magenta
+            "red",
+            "yellow",
+            "green",
+            "blue",
+            "cyan",
+            "white",
+            "magenta",
         };
     }
 }
