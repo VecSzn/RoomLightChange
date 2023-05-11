@@ -1,8 +1,3 @@
-﻿#region Assembly XPlugin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-// C:\Users\VecSzn\Desktop\Main Files\SCP服务器配置\插件\XPlugin.dll
-// Decompiled with ICSharpCode.Decompiler 7.1.0.6543
-#endregion
-
 using System.Collections.Generic;
 using System.ComponentModel;
 using MapGeneration;
